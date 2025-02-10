@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --extra-light-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+    --font-size-16: 16px;
+    --Weight500:500;
+    --Weight700:700;
+    --Weight900:900;
+
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Red Hat Display", serif;
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-repeat: repeat-x;
+    width: 100%;
+    background-color: var(--pale-blue);
+}
+body main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    width: 25rem;
+    height: 38rem;
+    border-radius: 15px;
+}body main section {
+    display: grid;
+    gap: 25px;
+    place-items: center;
+}
+body main figure img{
+    border-radius: 15px 15px 0px 0px;
+    width: 25rem;
+}
+body main h1{
+    font-weight: var(--Weight900);
+    color: var(--dark-blue);
+}
+body main .order-description{
+    font-size: var(--font-size-16);
+    width: 300px;
+    text-align: center;
+    color: var(--desaturated-blue);
+    font-weight: var(--Weight500);
+}
+body main .order-details{
+    display: flex;
+    background-color: var(--extra-light-blue);
+    width: 20rem;
+    padding: 1rem;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+body main .order-details img{
+    width: 40px;
+}
+body main .order-details .cost{
+    position: relative;
+    right: 20px;
+}
+body main .order-details .cost .plane{
+    font-weight: var(--Weight900);
+    color: var(--dark-blue);
+}
+body main .order-details .cost .price{
+    color:var(--desaturated-blue);
+    font-size: var(--font-size-16);
+}
+body main .order-details a{
+    color: blue;
+    font-size: 14px;
+    font-weight:var(--Weight700);
+}
+body main .submit{
+    color: var(--extra-light-blue);
+    background-color: var(--bright-blue);
+    border: none;
+    width: 80%;
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px 0px var(--pale-blue);
+    cursor: pointer;
+    font-weight: var(--Weight900);
+}
+body main .cancle{
+    color: var(--desaturated-blue);
+    border: none;
+    background-color:transparent;
+    font-weight:var(--Weight700);
+    cursor: pointer;
+}
+body main .order-details a:hover{
+    color: rgb(136, 136, 253);
+    text-decoration: none;
+}
+body main .submit:hover{
+    background-color:rgb(136, 136, 253);
+}
+body main .cancle:hover{
+    color: var(--dark-blue);
+}
+@media only screen and (max-width: 440px) {
+    body main {
+      width: 22rem;
+      display: flex;
+      justify-content: center;
+    }
+    body main section{
+        width: 85%;
+    }
+    body main section figure img{
+        width: 22rem;
+    }
+    body main section {
+        display: flex;
+        flex-direction: column;
+      }
+      body main section .order-details{
+        width: 100%;
+      }
+      body main section .submit{
+        width: 100%;
+      }
+  }
